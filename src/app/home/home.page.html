@@ -1,20 +1,45 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+<ion-header>
+  <ion-toolbar class="barra-principal">
+    <ion-title class="titulo-principal">
+      Projeto 1 - Mobile
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div class="container">
+    <div class="card totem">
+      <img src="../../assets/img/a86359d0d8.png" alt="Imagem do totem" class="imagem">
+      <p class="frase">Este aplicativo foi desenvolvido como parte da avaliação para a disciplina de Dispositivo Móvel.</p>
+    </div>
+    <div class="card alunos">
+      <h2>Contribuíram para esse projeto:</h2>
+      <ion-list class="lista-de-alunos">
+        <ion-item class="itens-da-lista" *ngFor="let aluno of alunos">
+          <ion-label class="nome-aluno">{{ aluno.nome }}</ion-label>
+          <ion-label class="matricula-aluno">{{ aluno.matricula }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
   </div>
+
+  <ion-footer>
+    <div class="box-footer">
+      <ion-title class="footer-inicio">
+        Início
+      </ion-title>
+    </div>
+
+    <div class="box-footer">
+      <ion-title class="footer-relatorio">
+        Relatórios
+      </ion-title>
+    </div>
+
+    <div class="box-footer">
+      <ion-title class="footer-sobre">
+        Sobre
+      </ion-title>
+    </div>
+  </ion-footer>
 </ion-content>
