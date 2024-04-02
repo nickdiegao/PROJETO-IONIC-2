@@ -16,6 +16,9 @@
       <h2>Contribuíram para esse projeto:</h2>
       <ion-list class="lista-de-alunos">
         <ion-item class="itens-da-lista" *ngFor="let aluno of alunos">
+          <ion-avatar>
+            <img [src]="aluno.imagem">
+          </ion-avatar>          
           <ion-label class="nome-aluno">{{ aluno.nome }}</ion-label>
           <ion-label class="matricula-aluno">{{ aluno.matricula }}</ion-label>
         </ion-item>
